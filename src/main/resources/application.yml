@@ -1,0 +1,29 @@
+
+#当前项目占用端口和url项目名
+server:
+  port: 8081
+
+#thymeleaf模版
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:/ehcache/ehcache.xml
+
+#mysql
+spring:
+ datasource:
+  url: jdbc:mysql://localhost:3306/ruxin_db?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&allowMultiQueries=true
+  username: root
+  password: Jm560816
+  driver-class-name: com.mysql.jdbc.Driver
+
+#mybatis
+mybatis:
+  config-locations: classpath:mybatis/mybatis-config.xml
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如欣服装公司库存管理系统</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/login.css">
+
+
+</head>
+<body style="background-image:url(/img/body-bg.png);background-repeat:repeat;">
+<div>
+    <!-- 导航条 -->
+    <div>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">如欣服装公司库存管理系统</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">系统管理<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/system/toUserManage.do">用户管理</a></li>
+                                <li><a href="#">货号管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">入库单管理<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">基本信息管理</a></li>
+                                <li><a href="#">明细管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">出库单管理<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">基本信息管理</a></li>
+                                <li><a href="#">明细管理</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#registerModal" style="outline:none;"><span class="glyphicon glyphicon-user"></span>辅助管理</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <div class="row" style="padding-top:100px;">
+        <div class="col-md-1"></div>
+        <!-- 主页面不知道写什么，先放一个echarts -->
+        <!-- 标准折线图----为ECharts准备一个具备大小（宽高）的Dom -->
+        <div class="col-md-10">
+            <div id="main" style="width: 100%;height:200px;"></div>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+</div>
+<!--<div class="container">
+    <div class="row" style="padding-top:100px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="text-align: center;display:none;" id="wtmm">
+            <div id="echarsStudy" style="margin:0 auto;">
+                &lt;!&ndash; 主页面不知道写什么，先放一个echarts &ndash;&gt;
+                &lt;!&ndash; 标准折线图&#45;&#45;&#45;&#45;为ECharts准备一个具备大小（宽高）的Dom &ndash;&gt;
+                <div id="main" style="width: 1000px;height:400px;">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>-->
+</body>
+
+<!-- jQuery文件，务必在bootstrap.min.js 之前引入 -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/echarts.js"></script>
+<script src="/js/line.js"></script>
+</html>
+

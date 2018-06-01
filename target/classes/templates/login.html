@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如欣服装公司库存管理系统</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/login.css">
+
+
+</head>
+<body style="background-image:url(/img/body-bg.png);background-repeat:repeat;">
+<div>
+    <!-- 导航条 -->
+    <div>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">如欣服装公司库存管理系统</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">系统管理<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/system/toUserManage.do">用户管理</a></li>
+                                <li><a href="#">货号管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">入库单管理<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">基本信息管理</a></li>
+                                <li><a href="#">明细管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">出库单管理<b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">基本信息管理</a></li>
+                                <li><a href="#">明细管理</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#registerModal" style="outline:none;"><span class="glyphicon glyphicon-user"></span>辅助管理</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 登录模态框（Modal） -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="outline:none;">×
+                    </button>-->
+                    <h4 class="modal-title" id="logModalLabel">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form"  id="loginForm">
+                        <div class="form-group">
+                            <label for="logUsername">用户名</label>
+                            <input type="text" class="form-control" id="logUsername" name="username" placeholder="请输入用户名">
+                        </div>
+                        <div class="form-group">
+                            <label for="logPassword">密码</label>
+                            <input type="password" class="form-control" id="logPassword" name="password" placeholder="请输入密码">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label class="col-sm-8" for="checkCode">验证码</label>
+                            </div>
+                            <div>
+                                <input type="text" id="checkCode" name="checkCode" placeholder="请输入验证码">
+                                <img id="codeImg" src="createImg.do" onclick="this.setAttribute('src','createImg.do?x='+Math.random());" title="点击更换" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" style="outline:none;" id="resetBtn">重置</button>
+                    <button type="button" class="btn btn-primary" style="outline:none;" id="loginBtn">登录</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+
+</body>
+
+<!-- jQuery文件，务必在bootstrap.min.js 之前引入 -->
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="/js/jquery.js"></script>
+<script src="/js/jquery.serializejson.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/login.js"></script>
+<script type="application/javascript">
+    //刷新页面即加载模态框
+    $('#loginModal').modal();
+</script>
+</html>
+
